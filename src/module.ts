@@ -18,11 +18,15 @@ export default defineNuxtModule<ModuleOptions>({
     const resolver = createResolver(import.meta.url)
 
     extendPages((pages) => {
-      pages.push({
-        name: 'maintenance',
-        file: resolver.resolve('./runtime/pages/maintenance.vue'),
-        path: '/maintenance'
-      })
+      const exists = pages.find((page) => page.name === 'maintenance')
+
+      if (! exists) {
+        pages.push({
+          name: 'maintenance',
+          file: resolver.resolve('./runtime/pages/maintenance.vue'),
+          path: '/maintenance'
+        })
+      }
     })
 
     if (_options.enableMaintenanceMode) {
