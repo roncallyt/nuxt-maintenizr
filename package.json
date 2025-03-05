@@ -1,8 +1,11 @@
 {
-  "name": "my-module",
+  "name": "nuxt-maintenizr",
   "version": "1.0.0",
-  "description": "My new Nuxt module",
-  "repository": "your-org/my-module",
+  "description": "Maintenance module for Nuxt.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roncallyt/nuxt-maintenizr.git"
+  },
   "license": "MIT",
   "type": "module",
   "exports": {

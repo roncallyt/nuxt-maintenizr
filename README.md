@@ -1,42 +1,39 @@
-<!--
-Get your module up and running quickly.
-
-Find and replace all on all files (CMD+SHIFT+F):
-- Name: Nuxt Maintenance
-- Package name: nuxt-maintenance
-- Description: My new Nuxt module
--->
-
-# Nuxt Maintenance
+# Nuxt Maintenizr
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-My new Nuxt module for doing amazing things.
+> Maintenance module for [Nuxt.js](https://nuxt.com/)
 
-- [✨ &nbsp;Release Notes](/CHANGELOG.md)
-<!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/nuxt-maintenance?file=playground%2Fapp.vue) -->
-<!-- - [📖 &nbsp;Documentation](https://example.com) -->
+- [✨ &nbsp;Release Notes](https://github.com/roncallyt/nuxt-maintenizr/releases)
+- [📖 &nbsp;Documentation](https://nuxt-maintenizr.t7n.dev)
+<!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/nuxt-maintenizr?file=playground%2Fapp.vue) -->
 
 ## Features
 
 <!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Foo
-- 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
+- Nuxt 3 ready
+- Typescript support
+- Override default maintenance page
 
 ## Quick Setup
 
-Install the module to your Nuxt application with one command:
+1. Add `nuxt-maintenizr` dependency to your project:
 
 ```bash
-npx nuxi module add nuxt-maintenance
+npx nuxi module add nuxt-maintenizr
 ```
 
-That's it! You can now use My Module in your Nuxt app ✨
+2. Add `nuxt-maintenizr` to the `modules` section of `nuxt.config.ts`:
 
+```js
+export default defineNuxtConfig({
+  modules: ['nuxt-maintenizr'],
+});
+```
+That's it! You can now use a beautiful and modern maintenance mode in your Nuxt app ✨
 
 ## Contribution
 
@@ -71,14 +68,14 @@ That's it! You can now use My Module in your Nuxt app ✨
 
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/nuxt-maintenance/latest.svg?style=flat&colorA=020420&colorB=00DC82
-[npm-version-href]: https://npmjs.com/package/nuxt-maintenance
+[npm-version-src]: https://img.shields.io/npm/v/nuxt-maintenizr/latest.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-version-href]: https://npmjs.com/package/nuxt-maintenizr
 
-[npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-maintenance.svg?style=flat&colorA=020420&colorB=00DC82
-[npm-downloads-href]: https://npm.chart.dev/nuxt-maintenance
+[npm-downloads-src]: https://img.shields.io/npm/dm/nuxt-maintenizr.svg?style=flat&colorA=020420&colorB=00DC82
+[npm-downloads-href]: https://npm.chart.dev/nuxt-maintenizr
 
-[license-src]: https://img.shields.io/npm/l/nuxt-maintenance.svg?style=flat&colorA=020420&colorB=00DC82
-[license-href]: https://npmjs.com/package/nuxt-maintenance
+[license-src]: https://img.shields.io/npm/l/nuxt-maintenizr.svg?style=flat&colorA=020420&colorB=00DC82
+[license-href]: https://npmjs.com/package/nuxt-maintenizr
 
 [nuxt-src]: https://img.shields.io/badge/Nuxt-020420?logo=nuxt.js
 [nuxt-href]: https://nuxt.com
