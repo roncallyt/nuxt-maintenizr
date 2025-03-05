@@ -1,7 +1,7 @@
 import { defineNuxtModule, addRouteMiddleware, createResolver, extendPages } from '@nuxt/kit'
 
 export interface ModuleOptions {
-  enableMaintenanceMode: boolean,
+  enableMaintenanceMode: boolean
 }
 
 export default defineNuxtModule<ModuleOptions>({
@@ -18,13 +18,13 @@ export default defineNuxtModule<ModuleOptions>({
     const resolver = createResolver(import.meta.url)
 
     extendPages((pages) => {
-      const exists = pages.find((page) => page.name === 'maintenance')
+      const exists = pages.find(page => page.name === 'maintenance')
 
-      if (! exists) {
+      if (!exists) {
         pages.push({
           name: 'maintenance',
           file: resolver.resolve('./runtime/pages/maintenance.vue'),
-          path: '/maintenance'
+          path: '/maintenance',
         })
       }
     })
