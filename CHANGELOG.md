@@ -1,0 +1,32 @@
+# Changelog
+
+
+## v1.0.1
+
+
+### 🩹 Fixes
+
+- Fix Typescript errors on release ([6b99938](https://github.com/roncallyt/nuxt-maintenizr/commit/6b99938))
+
+### 📖 Documentation
+
+- Update README ([45f11c7](https://github.com/roncallyt/nuxt-maintenizr/commit/45f11c7))
+- Change package name ([9990770](https://github.com/roncallyt/nuxt-maintenizr/commit/9990770))
+- Add License file ([31ceccc](https://github.com/roncallyt/nuxt-maintenizr/commit/31ceccc))
+
+### 📦 Build
+
+- Replace pnpm for npm ([95b6526](https://github.com/roncallyt/nuxt-maintenizr/commit/95b6526))
+
+### ✅ Tests
+
+- Add index page to test ([083b933](https://github.com/roncallyt/nuxt-maintenizr/commit/083b933))
+
+### 🎨 Styles
+
+- Fix ESLint errors ([883e45f](https://github.com/roncallyt/nuxt-maintenizr/commit/883e45f))
+
+### ❤️ Contributors
+
+- Thomerson Roncally Araújo Teixeira ([@roncallyt](https://github.com/roncallyt))
+
