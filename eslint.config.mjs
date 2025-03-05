@@ -14,7 +14,12 @@ export default createConfigForNuxt({
       './playground',
     ],
   },
+
 })
-  .append(
-    // your custom flat config here...
-  )
+  .append({
+    rules: {
+      'vue/multi-word-component-names': ['error', {
+        ignores: ['index', 'maintenance'],
+      }],
+    },
+  })
