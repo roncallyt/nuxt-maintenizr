@@ -87,6 +87,11 @@ npx nuxt-maintenizr up
 
 </details>
 
+## Support
+
+Hi, I am Thomerson Roncally, a Fullstack Developer that love to build things to help other developers. If you like my work and want to support me, you can donate here:
+
+[![ko-fi](https://www.ko-fi.com/img/donate_sm.png)](https://ko-fi.com/roncallyt)
 
 <!-- Badges -->
 [npm-version-src]: https://img.shields.io/npm/v/nuxt-maintenizr/latest.svg?style=flat&colorA=020420&colorB=00DC82
