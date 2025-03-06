@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v1.0.3
+
+[compare changes](https://github.com/roncallyt/nuxt-maintenizr/compare/v1.0.2...v1.0.3)
+
+### 📖 Documentation
+
+- Update README with a how to use section ([fdb1e93](https://github.com/roncallyt/nuxt-maintenizr/commit/fdb1e93))
+- Add support section to README ([4aeaf8a](https://github.com/roncallyt/nuxt-maintenizr/commit/4aeaf8a))
+
+### ❤️ Contributors
+
+- Thomerson Roncally Araújo Teixeira ([@roncallyt](https://github.com/roncallyt))
+
 ## v1.0.2
 
 [compare changes](https://github.com/roncallyt/nuxt-maintenizr/compare/v1.0.1...v1.0.2)

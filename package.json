@@ -1,6 +1,6 @@
 {
   "name": "nuxt-maintenizr",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Maintenance module for Nuxt.js",
   "repository": {
     "type": "git",
