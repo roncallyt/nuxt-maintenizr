@@ -7,8 +7,8 @@
 
 > Maintenance module for [Nuxt.js](https://nuxt.com/)
 
-- [✨ &nbsp;Release Notes](https://github.com/roncallyt/nuxt-maintenizr/releases)
-- [📖 &nbsp;Documentation](https://nuxt-maintenizr.t7n.dev)
+- [Release Notes](https://github.com/roncallyt/nuxt-maintenizr/releases)
+- [Documentation](https://nuxt-maintenizr.t7n.dev)
 <!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/nuxt-maintenizr?file=playground%2Fapp.vue) -->
 
 ## Features
@@ -17,6 +17,7 @@
 - Nuxt 3 ready
 - Typescript support
 - Override default maintenance page
+- CLI to manage maintenance status of application
 
 ## Quick Setup
 
@@ -34,6 +35,26 @@ export default defineNuxtConfig({
 });
 ```
 That's it! You can now use a beautiful and modern maintenance mode in your Nuxt app ✨
+
+## How to use
+
+1. Show current status of the application:
+
+```bash
+npx nuxt-maintenizr status 
+```
+
+2. Enable maintenance mode (Turn off the application):
+
+```bash
+npx nuxt-maintenizr down
+```
+
+3. Disable maintenance mode (Turn on the application):
+
+```bash
+npx nuxt-maintenizr up
+```
 
 ## Contribution
 
