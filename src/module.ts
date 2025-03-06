@@ -1,21 +1,35 @@
 import { defineNuxtModule, addRouteMiddleware, createResolver, extendPages } from '@nuxt/kit'
+import { defu } from 'defu'
+import * as rc from 'rc9'
+import { logger } from './utils/log'
+
+const RC_FILENAME = '.nuxtrc'
 
 export interface ModuleOptions {
-  enableMaintenanceMode: boolean
+  enabled: boolean
 }
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'nuxt-maintenance',
-    configKey: 'maintenance',
+    name: 'nuxt-maintenizr',
+    configKey: 'maintenizr',
   },
 
   defaults: {
-    enableMaintenanceMode: false,
+    enabled: false,
   },
 
-  setup(_options, _nuxt) {
-    const resolver = createResolver(import.meta.url)
+  setup(options, nuxt) {
+    const { resolve } = createResolver(import.meta.url)
+
+    nuxt.options.runtimeConfig.public.maintenizr = defu<ModuleOptions, ModuleOptions[]>(
+      nuxt.options.runtimeConfig.public.maintenizr,
+      {
+        enabled: options.enabled,
+      },
+    )
+
+    logger.info('[Nuxt Maintenizr] Maintenance mode enabled.')
 
     extendPages((pages) => {
       const exists = pages.find(page => page.name === 'maintenance')
@@ -23,16 +37,18 @@ export default defineNuxtModule<ModuleOptions>({
       if (!exists) {
         pages.push({
           name: 'maintenance',
-          file: resolver.resolve('./runtime/pages/maintenance.vue'),
+          file: resolve('./runtime/pages/maintenance.vue'),
           path: '/maintenance',
         })
       }
     })
 
-    if (_options.enableMaintenanceMode) {
+    const disabledByConf = (conf: any) => conf.maintenizr === false || (conf.maintenizr && conf.maintenizr.enabled === false)
+
+    if (!disabledByConf(rc.read({ name: RC_FILENAME, dir: nuxt.options.rootDir }))) {
       addRouteMiddleware({
         name: 'catch-all',
-        path: resolver.resolve('./runtime/middlewares/catch-all.ts'),
+        path: resolve('./runtime/middlewares/catch-all.ts'),
         global: true,
       })
     }
