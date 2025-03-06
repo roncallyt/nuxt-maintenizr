@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.2
+
+[compare changes](https://github.com/roncallyt/nuxt-maintenizr/compare/v1.0.1...v1.0.2)
+
+### 🎨 Styles
+
+- Fix eslint errors ([01b6c2b](https://github.com/roncallyt/nuxt-maintenizr/commit/01b6c2b))
+
+### ❤️ Contributors
+
+- Thomerson Roncally Araújo Teixeira ([@roncallyt](https://github.com/roncallyt))
+
 ## v1.0.1
 
 
