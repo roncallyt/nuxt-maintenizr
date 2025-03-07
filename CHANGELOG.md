@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.4
+
+[compare changes](https://github.com/roncallyt/nuxt-maintenizr/compare/v1.0.3...v1.0.4)
+
+### 🩹 Fixes
+
+- Solve bug on load route middleware ([8f4560f](https://github.com/roncallyt/nuxt-maintenizr/commit/8f4560f))
+
+### ❤️ Contributors
+
+- Thomerson Roncally Araújo Teixeira ([@roncallyt](https://github.com/roncallyt))
+
 ## v1.0.3
 
 [compare changes](https://github.com/roncallyt/nuxt-maintenizr/compare/v1.0.2...v1.0.3)
