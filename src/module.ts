@@ -1,8 +1,7 @@
 import { defineNuxtModule, addRouteMiddleware, createResolver, extendPages } from '@nuxt/kit'
 import { defu } from 'defu'
 import * as rc from 'rc9'
-import { logger } from './utils/log'
-import { RC_FILENAME, setRC } from './utils/rc'
+import { RC_FILENAME } from './utils/rc'
 
 export interface ModuleOptions {
   enabled: boolean
@@ -28,12 +27,6 @@ export default defineNuxtModule<ModuleOptions>({
       },
     )
 
-    if (!nuxt.options.build.transpile) {
-      nuxt.options.build.transpile = []
-    }
-
-    nuxt.options.build.transpile.push('nuxt-maintenizr')
-
     extendPages((pages) => {
       const exists = pages.find(page => page.name === 'maintenance')
 
@@ -51,7 +44,7 @@ export default defineNuxtModule<ModuleOptions>({
     if (!disabledByConf(rc.read({ name: RC_FILENAME, dir: nuxt.options.rootDir }))) {
       addRouteMiddleware({
         name: 'catch-all',
-        path: resolve('./runtime/middlewares/catch-all.ts'),
+        path: resolve('./runtime/middlewares/catch-all.js'),
         global: true,
       })
     }
