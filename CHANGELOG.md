@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.5
+
+[compare changes](https://github.com/roncallyt/nuxt-maintenizr/compare/v1.0.4...v1.0.5)
+
+### 🩹 Fixes
+
+- Use javascript instead of typescript to route middleware ([6c884a4](https://github.com/roncallyt/nuxt-maintenizr/commit/6c884a4))
+
+### ❤️ Contributors
+
+- Thomerson Roncally Araújo Teixeira ([@roncallyt](https://github.com/roncallyt))
+
 ## v1.0.4
 
 [compare changes](https://github.com/roncallyt/nuxt-maintenizr/compare/v1.0.3...v1.0.4)
