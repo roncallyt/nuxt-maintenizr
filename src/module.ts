@@ -2,8 +2,7 @@ import { defineNuxtModule, addRouteMiddleware, createResolver, extendPages } fro
 import { defu } from 'defu'
 import * as rc from 'rc9'
 import { logger } from './utils/log'
-
-const RC_FILENAME = '.nuxtrc'
+import { RC_FILENAME, setRC } from './utils/rc'
 
 export interface ModuleOptions {
   enabled: boolean
@@ -29,7 +28,11 @@ export default defineNuxtModule<ModuleOptions>({
       },
     )
 
-    logger.info('[Nuxt Maintenizr] Maintenance mode enabled.')
+    if (!nuxt.options.build.transpile) {
+      nuxt.options.build.transpile = []
+    }
+
+    nuxt.options.build.transpile.push('nuxt-maintenizr')
 
     extendPages((pages) => {
       const exists = pages.find(page => page.name === 'maintenance')

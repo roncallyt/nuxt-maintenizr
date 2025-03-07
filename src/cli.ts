@@ -7,7 +7,7 @@ import { isTest } from 'std-env'
 import { createMain, defineCommand } from 'citty'
 import { version } from '../package.json'
 
-const RC_FILENAME = '.nuxtrc'
+import { RC_FILENAME, setRC } from './utils/rc'
 
 const sharedArgs = {
   dir: {
@@ -91,12 +91,6 @@ async function showStatus(dir: string) {
   } else {
     consola.info(`Your application is now ${c.red('down')}.`)
   }
-}
-
-function setRC(dir: string, key: string, val: string | number | boolean) {
-  const update = { [key]: val }
-
-  rc.update(update, { name: RC_FILENAME, dir })
 }
 
 async function ensureNuxtProject(args: { dir: string }) {
