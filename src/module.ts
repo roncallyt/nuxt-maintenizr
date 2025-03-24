@@ -1,3 +1,4 @@
+import { fileURLToPath } from 'node:url'
 import { defineNuxtModule, addRouteMiddleware, createResolver, extendPages } from '@nuxt/kit'
 import { defu } from 'defu'
 import * as rc from 'rc9'
@@ -20,6 +21,10 @@ export default defineNuxtModule<ModuleOptions>({
   setup(options, nuxt) {
     const { resolve } = createResolver(import.meta.url)
 
+    const runtimeDir = fileURLToPath(new URL('./runtime', import.meta.url))
+
+    nuxt.options.build.transpile.push(runtimeDir)
+
     nuxt.options.runtimeConfig.public.maintenizr = defu<ModuleOptions, ModuleOptions[]>(
       nuxt.options.runtimeConfig.public.maintenizr,
       {
@@ -33,7 +38,7 @@ export default defineNuxtModule<ModuleOptions>({
       if (!exists) {
         pages.push({
           name: 'maintenance',
-          file: resolve('./runtime/pages/maintenance.vue'),
+          file: resolve(runtimeDir, 'pages/maintenance.vue'),
           path: '/maintenance',
         })
       }
@@ -44,7 +49,7 @@ export default defineNuxtModule<ModuleOptions>({
     if (!disabledByConf(rc.read({ name: RC_FILENAME, dir: nuxt.options.rootDir }))) {
       addRouteMiddleware({
         name: 'catch-all',
-        path: resolve('./runtime/middlewares/catch-all.js'),
+        path: resolve(runtimeDir, 'middlewares/catch-all'),
         global: true,
       })
     }
