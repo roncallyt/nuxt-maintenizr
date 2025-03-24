@@ -1,6 +1,18 @@
 # Changelog
 
 
+## v1.0.6
+
+[compare changes](https://github.com/roncallyt/nuxt-maintenizr/compare/v1.0.5...v1.0.6)
+
+### 🩹 Fixes
+
+- Solve problem with catch all middleware using .ts extension ([74bb097](https://github.com/roncallyt/nuxt-maintenizr/commit/74bb097))
+
+### ❤️ Contributors
+
+- Thomerson Roncally Araújo Teixeira ([@roncallyt](https://github.com/roncallyt))
+
 ## v1.0.5
 
 [compare changes](https://github.com/roncallyt/nuxt-maintenizr/compare/v1.0.4...v1.0.5)
